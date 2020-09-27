@@ -1,10 +1,15 @@
 #!/bin/bash
+PA=$PWD
 cd /home/azureuser/
-rm -r deployment
+sudo rm -r deployment
 mkdir deployment
 cd deployment
+DEPLOYMENTPATH=$PWD
 virtualenv virtualenv
+echo $PA
+echo $DEPLOYMENTPATH
+scp -r $PA/.* .
 source virtualenv/bin/activate
 pip install -r requirements.txt
-python app.py -P 0.0.0.0
+python app.py -P 0.0.0.0 &
 
