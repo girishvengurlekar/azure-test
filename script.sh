@@ -1,8 +1,9 @@
 #!/bin/bash
 PA=$PWD
+whoami
 cd /home/azureuser/
 sudo -n rm -r deployment
-mkdir deployment
+sudo mkdir deployment
 cd deployment
 DEPLOYMENTPATH=$PWD
 virtualenv virtualenv
