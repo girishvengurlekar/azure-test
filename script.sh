@@ -6,7 +6,7 @@ sudo -n rm -r deployment
 sudo mkdir deployment
 cd deployment
 DEPLOYMENTPATH=$PWD
-virtualenv2.7 virtualenv
+virtualenv --python=python2.7 virtualenv
 echo $PA
 echo $DEPLOYMENTPATH
 sudo scp -r $PA/.* .
