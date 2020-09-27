@@ -6,10 +6,10 @@ sudo -n rm -r deployment
 sudo mkdir deployment
 cd deployment
 DEPLOYMENTPATH=$PWD
-virtualenv virtualenv
+sudo virtualenv virtualenv
 echo $PA
 echo $DEPLOYMENTPATH
-scp -r $PA/.* .
+sudo scp -r $PA/.* .
 source virtualenv/bin/activate
 pip install -r requirements.txt
 sudo -n kill $(sudo lsof -t -i:5000)
