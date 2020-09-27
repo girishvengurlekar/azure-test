@@ -6,7 +6,7 @@ sudo -n rm -r deployment
 sudo mkdir deployment
 cd deployment
 DEPLOYMENTPATH=$PWD
-sudo virtualenv virtualenv
+virtualenv virtualenv
 echo $PA
 echo $DEPLOYMENTPATH
 sudo scp -r $PA/.* .
