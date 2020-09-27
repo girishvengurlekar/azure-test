@@ -11,7 +11,7 @@ echo $PA
 echo $DEPLOYMENTPATH
 sudo scp -r $PA/.* .
 source virtualenv/bin/activate
-pip install -r requirements.txt --user
+pip install -r requirements.txt
 sudo -n kill $(sudo lsof -t -i:5000)
 python app.py -P 0.0.0.0 &
 
